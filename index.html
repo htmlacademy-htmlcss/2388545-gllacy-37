@@ -53,7 +53,7 @@
             </address>
             <ul class="navigation-user">
               <li class="navigation-item">
-                <a class="navigation-link navigation-link-search" href="#">
+                <a class="navigation-link navigation-link-search link-with-popover" href="#">
                   <span class="visually-hidden">Поиск.</span>
                   <svg class="navigation-link-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17"><path fill-rule="evenodd" d="M2.66 8.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z" clip-rule="evenodd"/></svg>
                 </a>
@@ -65,7 +65,7 @@
                 </div>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link link-with-popover" href="#">
                   <svg class="navigation-link-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17"><path fill-rule="evenodd" d="M9 2.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H9.667a.667.667 0 0 1 0-1.333h2.666A.667.667 0 0 0 13 13.19V3.858a.666.666 0 0 0-.667-.667H9.667A.667.667 0 0 1 9 2.525ZM5.862 4.72c.26-.26.682-.26.943 0l3.329 3.329a.69.69 0 0 1 .129.177.664.664 0 0 1-.13.774l-3.328 3.33a.667.667 0 1 1-.943-.944l2.195-2.195h-6.39a.667.667 0 1 1 0-1.333h6.39L5.862 5.663a.667.667 0 0 1 0-.943Z" clip-rule="evenodd"/></svg>
                   Вход
                 </a>
@@ -91,7 +91,7 @@
                 </div>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link link-with-popover" href="#">
                   <span class="visually-hidden">Корзина.</span>
                   <svg class="navigation-link-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17"><path fill-rule="evenodd" d="M1.167 2.108a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.493.493 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" clip-rule="evenodd"/></svg>
                   2 товара
@@ -105,8 +105,8 @@
                     <ul class="cart-list">
                       <li class="cart-item">
                         <input type="hidden" name="cart-item" value="Малинка">
-                        <a class="cart-link">
-                          <img class="cart-image" src="" width="" height="" alt="Сливочное мороженое с малиновым джемом.">
+                        <a class="cart-link" href="#">
+                          <img class="cart-image" src="images/card/raspberry.jpg" width="46" height="46" alt="Сливочное мороженое с малиновым джемом.">
                           <div class="cart-position-container">
                             <p class="cart-position">Малинка</p>
                             <p class="cart-position-info">1 кг х 310 ₽</p>
@@ -119,8 +119,8 @@
                       </li>
                       <li class="cart-item">
                         <input type="hidden" name="cart-item" value="Бабл-гам">
-                        <a class="cart-link">
-                          <img class="cart-image" src="" width="" height="" alt="Ванильный пломбир со сладкой посыпкой.">
+                        <a class="cart-link" href="#">
+                          <img class="cart-image" src="images/card/bubble-gum.jpg" width="46" height="46" alt="Ванильный пломбир со сладкой посыпкой.">
                           <div class="cart-position-container">
                             <p class="cart-position">Бабл-гам</p>
                             <p class="cart-position-info">1,5 кг х 320 ₽</p>
@@ -132,8 +132,10 @@
                         </button>
                       </li>
                     </ul>
-                    <button class="button" type="submit">Оформить заказ</button>
-                    <p class="cart-sum">Итого: <span class="cart-counter">790</span> ₽</p>
+                    <div class="cart-total">
+                      <p class="cart-sum">Итого: <span class="cart-counter">790</span> ₽</p>
+                      <button class="button button-dark" type="submit">Оформить заказ</button>
+                    </div>
                   </form>
                 </div>
               </li>
@@ -147,38 +149,40 @@
           <h2 class="visually-hidden">Новинки мороженого.</h2>
           <ol class="carousel-list">
             <li class="carousel-item carousel-current">
-              <h3 class="carousel-title">Нежный пломбир с клубничным джемом</h3>
-              <p class="carousel-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+              <h3 class="title carousel-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
+              <p class="carousel-description">Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
               <a class="button" href="#">Заказать</a>
             </li>
             <li class="carousel-item">
-              <h3 class="carousel-title">Сливочное мороженое со вкусом банана</h3>
+              <h3 class="title carousel-title">Сливочное мороженое со вкусом банана</h3>
               <p class="carousel-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
               <a class="button" href="#">Заказать</a>
             </li>
             <li class="carousel-item">
-              <h3 class="carousel-title">Карамельный пломбир с маршмеллоу</h3>
+              <h3 class="title carousel-title">Карамельный пломбир с маршмеллоу</h3>
               <p class="carousel-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
               <a class="button" href="#">Заказать</a>
             </li>
           </ol>
+          <ol class="carousel-images-list">
+            <li class="carousel-images-item carousel-image-current">
+              <img class="carousel-image" src="images/carousel/product-1.png" width="100" height="150" alt="Нежный пломбир с клубничным джемом.">
+            </li>
+            <li class="carousel-images-item">
+              <img class="carousel-image" src="images/carousel/product-2.png" width="100" height="150" alt="Сливочное мороженое со вкусом банана.">
+            </li>
+            <li class="carousel-images-item">
+              <img class="carousel-image" src="images/carousel/product-3.png" width="100" height="150" alt="Карамельный пломбир с маршмеллоу.">
+            </li>
+          </ol>
           <button class="carousel-button button-prev" type="button">
             <span class="visually-hidden">Предыдущий товар.</span>
+            <svg class="carousel-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 17"><path fill-rule="evenodd" d="M3.8 7.05a.67.67 0 1 0-.93.95l4.66 4.66a.66.66 0 0 0 .95 0L13.14 8a.67.67 0 0 0-.94-.95L8 11.25l-4.2-4.2Z" clip-rule="evenodd"/></svg>
           </button>
           <button class="carousel-button button-next" type="button">
             <span class="visually-hidden">Следующий товар.</span>
+            <svg class="carousel-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 17"><path fill-rule="evenodd" d="M3.8 7.05a.67.67 0 1 0-.93.95l4.66 4.66a.66.66 0 0 0 .95 0L13.14 8a.67.67 0 0 0-.94-.95L8 11.25l-4.2-4.2Z" clip-rule="evenodd"/></svg>
           </button>
-          <ol class="carousel-images-list">
-            <li class="carousel-images-item carousel-image-current">
-              <img class="carousel-image" src="" width="" height="" alt="Нежный пломбир с клубничным джемом.">
-            </li>
-            <li class="carousel-images-item">
-              <img class="carousel-image" src="" width="" height="" alt="Сливочное мороженое со вкусом банана.">
-            </li>
-            <li class="carousel-images-item">
-              <img class="carousel-image" src="" width="" height="" alt="Карамельный пломбир с маршмеллоу.">
-            </li>
-          </ol>
           <ol class="carousel-pagination">
             <li class="carousel-pagination-item">
               <button class="carousel-pagination-button carousel-pagination-current" type="button">
