@@ -1076,8 +1076,7 @@ body.carousel-product-3 {
   flex-shrink: 0;
   background-image: url("../images/article-fill.jpg");
   background-repeat: no-repeat;
-  background-position: top -108px right -77px;
-  background-size: 115%;
+  background-position: top -107px right -77px;
 }
 
 .article-link {
@@ -1156,8 +1155,7 @@ body.carousel-product-3 {
   border-radius: 16px;
   background-image: url("../images/delivery-fill.jpg");
   background-repeat: no-repeat;
-  background-position: top -134px right -57px;
-  background-size: 105%;
+  background-position: top -134px right -59px;
 }
 
 .delivery .title {
