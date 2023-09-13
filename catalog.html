@@ -153,7 +153,7 @@
               <a class="breadcrumbs-link" href="#">Каталог</a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Сливочное мороженое</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current">Сливочное мороженое</a>
             </li>
           </ul>
           <h1 class="title inner-header-title">Сливочное мороженое</h1>
@@ -164,24 +164,25 @@
             <div class="filter-group">
               <label class="filter-label" for="filter-select">Сортировка:</label>
               <select class="select-control" id="filter-select">
-                <option value="popular">Популярные</option>
-                <option value="rating">В наличии</option>
-                <option value="cheap">Недорогие</option>
+                <option value="popular">по популярности</option>
+                <option value="rating">по рейтингу</option>
+                <option value="cheap">по цене</option>
               </select>
             </div>
             <fieldset class="filter-group">
-              <legend class="filter-label">Цена:</legend>
+              <legend class="visually-hidden">Цена.</legend>
               <div class="range-wrapper-inputs">
+                <span class="filter-label">Цена:</span>
                 <label class="visually-hidden" for="min-price">Минимальная цена.</label>
                 <input class="range-input" type="number" value="100" name="min-price" id="min-price">
-                ₽
+                ₽ –
                 <label class="visually-hidden" for="max-price">Максимальная цена.</label>
                 <input class="range-input" type="number" value="500" name="max-price" id="max-price">
                 ₽
               </div>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 0; width: 119px">
+                  <div class="range-bar" style="left: 35px; width: 56px">
                     <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
